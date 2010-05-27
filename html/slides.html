@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta name="description" content="@lucastex Grails Java produtivo e divertido @lucastex @lucastex Lucas Teixeira lucastex.com.br lucastex.com @lucastex @lucastex gr8forums.org @lucastex gsolr grails-stella grails-correios-br grails-featurable grails-file-uploader grails-tinyurl github.com/lucastex @lucastex Groovy Grails Comunidade Demo @lucastex Groovy @lucastex O que te motiva? @lucastex Pensar a maior parte do tempo @lucastex @lucastex Pensar @lucastex import java.util.List;import java.util.ArrayList;class Seletor {	private List selecionaMenoresQue(List palavras, int tamanho) {		List resultado = new ArrayList();		for (int i = 0; i &lt; palavras.size(); i++) {			String pal = (String) palavras.get(i);			if (pal.length() &lt;= tamanho) {				resultado.add(pal);			}		}		return resultado;	}		public static void main(String[] args) {		List linguagens = new ArrayList();		linguagens.add(&quot;Java&quot;);		linguagens.add(&quot;Scala&quot;);		linguagens.add(&quot;Groovy&quot;);		linguagens.add(&quot;Ruby&quot;);				Seletor seletor = new Seletor();		List selecionadas = seletor.selecionaMenoresQue(linguagens, 5);		System.out.println(&quot;Total &quot;+selecionadas.size())				for (int i = 0; i &lt; selecionadas.size(); i++) {			String sel = (String) selecionadas.get(i);			System.out.println(sel);		}	}} Seletor.java @lucastex import java.util.List;import java.util.ArrayList;class Seletor {	private List selecionaMenoresQue(List palavras, int tamanho) {		List resultado = new ArrayList();		for (int i = 0; i &lt; palavras.size(); i++) {			String pal = (String) palavras.get(i);			if (pal.length() &lt;= tamanho) {				resultado.add(pal);			}		}		return resultado;	}		public static void main(String[] args) {		List linguagens = new ArrayList();		linguagens.add(&quot;Java&quot;);		linguagens.add(&quot;Scala&quot;);		linguagens.add(&quot;Groovy&quot;);		linguagens.add(&quot;Ruby&quot;);				Seletor seletor = new Seletor();		List selecionadas = seletor.selecionaMenoresQue(linguagens, 5);		System.out.println(&quot;Total &quot;+selecionadas.size())				for (int i = 0; i &lt; selecionadas.size(); i++) {			String sel = (String) selecionadas.get(i);			System.out.println(sel);		}	}} @lucastex regra dos 80 - 20 @lucastex import java.util.List;import java.util.ArrayList;class Seletor {	private List selecionaMenoresQue(List palavras, int tamanho) {		List resultado = new ArrayList();		for (int i = 0; i &lt; palavras.size(); i++) {			String pal = (String) palavras.get(i);			if (pal.length() &lt;= tamanho) {				resultado.add(pal);			}		}		return resultado;	}		public static void main(String[] args) {		List linguagens = new ArrayList();		linguagens.add(&quot;Java&quot;);		linguagens.add(&quot;Scala&quot;);		linguagens.add(&quot;Groovy&quot;);		linguagens.add(&quot;Ruby&quot;);				Seletor seletor = new Seletor();		List selecionadas = seletor.selecionaMenoresQue(linguagens, 5);		System.out.println(&quot;Total &quot;+selecionadas.size())				for (int i = 0; i &lt; selecionadas.size(); i++) {			String sel = (String) selecionadas.get(i);			System.out.println(sel);		}	}} @lucastex class Seletor {	private List selecionaMenoresQue(List palavras, int tamanho) {		List resultado = new ArrayList()		palavras.each { String pal -&gt;			if (pal.length() &lt;= tamanho) {				resultado.add(pal)			}		}		return resultado	}		public static void main(String[] args) {		List linguagens = new ArrayList()		linguagens.add(&quot;Java&quot;)		linguagens.add(&quot;Scala&quot;)		linguagens.add(&quot;Groovy&quot;)		linguagens.add(&quot;Ruby&quot;)				Seletor seletor = new Seletor()		List selecionadas = seletor.selecionaMenoresQue(linguagens, 5)		System.out.println(&quot;Total &quot;+selecionadas.size())				selecionadas.each { String sel -&gt;			System.out.println(sel)		}	}} @lucastex class Seletor {	private List selecionaMenoresQue(List palavras, int tamanho) {		List resultado = new ArrayList()		palavras.each { String pal -&gt;			if (pal.length() &lt;= tamanho) {				resultado.add(pal)			}		}		return resultado	}		public static void main(String[] args) {		List linguagens = new ArrayList()		linguagens.add(&quot;Java&quot;)		linguagens.add(&quot;Scala&quot;)		linguagens.add(&quot;Groovy&quot;)		linguagens.add(&quot;Ruby&quot;)				Seletor seletor = new Seletor()		List selecionadas = seletor.selecionaMenoresQue(linguagens, 5)		System.out.println(&quot;Total &quot;+selecionadas.size())				selecionadas.each { String sel -&gt;			System.out.println(sel)		}	}} @lucastex def selecionaMenoresQue(palavras, tamanho) {	def resultado = new ArrayList()	palavras.each { pal -&gt;		if (pal.size() &lt;= tamanho) {			resultado.add(pal)		}	}	return resultado}def linguagens = new ArrayList()linguagens.add(&quot;Java&quot;)linguagens.add(&quot;Scala&quot;)linguagens.add(&quot;Groovy&quot;)linguagens.add(&quot;Ruby&quot;)	def selecionadas = selecionaMenoresQue(linguagens, 5)System.out.println(&quot;Total &quot;+selecionadas.size())selecionadas.each { sel -&gt;	System.out.println(sel)} @lucastex def selecionaMenoresQue(palavras, tamanho) {	def resultado = new ArrayList()	palavras.each { pal -&gt;		if (pal.size() &lt;= tamanho) {			resultado.add(pal)		}	}	return resultado}def linguagens = new ArrayList()linguagens.add(&quot;Java&quot;)linguagens.add(&quot;Scala&quot;)linguagens.add(&quot;Groovy&quot;)linguagens.add(&quot;Ruby&quot;)	def selecionadas = selecionaMenoresQue(linguagens, 5)System.out.println(&quot;Total &quot;+selecionadas.size())selecionadas.each { sel -&gt;	System.out.println(sel)} @lucastex def selecionaMenoresQue(palavras, tamanho) {	def resultado = []	palavras.each { pal -&gt;		if (pal.size() &lt;= tamanho) {			resultado.add(pal)		}	}	resultado}def linguagens = [&quot;Java&quot;,&quot;Scala&quot;,&quot;Groovy&quot;,&quot;Ruby&quot;]def selecionadas = selecionaMenoresQue(linguagens, 5)println(&quot;Total ${selecionadas.size()}&quot;)selecionadas.each { sel -&gt;	println(sel)} @lucastex def selecionaMenoresQue(palavras, tamanho) {	def resultado = []	palavras.each { pal -&gt;		if (pal.size() &lt;= tamanho) {			resultado.add(pal)		}	}	resultado}def linguagens = [&quot;Java&quot;,&quot;Scala&quot;,&quot;Groovy&quot;,&quot;Ruby&quot;]def selecionadas = selecionaMenoresQue(linguagens, 5)println(&quot;Total ${selecionadas.size()}&quot;)selecionadas.each { sel -&gt;	println(sel)} @lucastex def selecionaMenoresQue(palavras, tamanho) {	palavras.findAll { it.size() &lt;= tamanho }}def linguagens = [&quot;Java&quot;,&quot;Scala&quot;,&quot;Groovy&quot;,&quot;Ruby&quot;]def selecionadas = selecionaMenoresQue(linguagens, 5)println &quot;Total ${selecionadas.size()}&quot;selecionadas.each { sel -&gt;	println sel} @lucastex def selecionaMenoresQue(palavras, tamanho) {	palavras.findAll { it.size() &lt;= tamanho }}def linguagens = [&quot;Java&quot;,&quot;Scala&quot;,&quot;Groovy&quot;,&quot;Ruby&quot;]def selecionadas = selecionaMenoresQue(linguagens, 5)println &quot;Total ${selecionadas.size()}&quot;selecionadas.each { sel -&gt;	println sel} @lucastex def linguagens = [&quot;Java&quot;,&quot;Scala&quot;,&quot;Groovy&quot;,&quot;Ruby&quot;]def selecionadas = linguagens.findAll { it.size() &lt;= 5 }println &quot;Total ${selecionadas.size()}&quot;selecionadas.each { sel -&gt;	println sel} @lucastex def linguagens = [&quot;Java&quot;,&quot;Scala&quot;,&quot;Groovy&quot;,&quot;Ruby&quot;]def selecionadas = linguagens.findAll { it.size() &lt;= 5 }println &quot;Total ${selecionadas.size()}&quot;selecionadas.each { sel -&gt;	println sel} Seletor.groovy @lucastex def linguagens = [&quot;Java&quot;,&quot;Scala&quot;,&quot;Groovy&quot;,&quot;Ruby&quot;]def selecionadas = linguagens.findAll { it.size() &lt;= 5 }println &quot;Total ${selecionadas.size()}&quot;selecionadas.each { sel -&gt;	println sel} Seletor.groovy @lucastex import java.util.List;import java.util.ArrayList;class Seletor {	private List selecionaMenoresQue(List palavras, int tamanho) {		List resultado = new ArrayList();		for (int i = 0; i &lt; palavras.size(); i++) {			String pal = (String) palavras.get(i);			if (pal.length() &lt;= tamanho) {				resultado.add(pal);			}		}		return resultado;	}		public static void main(String[] args) {		List linguagens = new ArrayList();		linguagens.add(&quot;Java&quot;);		linguagens.add(&quot;Scala&quot;);		linguagens.add(&quot;Groovy&quot;);		linguagens.add(&quot;Ruby&quot;);				Seletor seletor = new Seletor();		List selecionadas = seletor.selecionaMenoresQue(linguagens, 5);		System.out.println(&quot;Total &quot;+selecionadas.size())				for (int i = 0; i &lt; selecionadas.size(); i++) {			String sel = (String) selecionadas.get(i);			System.out.println(sel);		}	}} Seletor.java @lucastex Groovy é Java! @lucastex import java.util.List;import java.util.ArrayList;class Seletor {	private List selecionaMenoresQue(List palavras, int tamanho) {		List resultado = new ArrayList();		for (int i = 0; i &lt; palavras.size(); i++) {			String pal = (String) palavras.get(i);			if (pal.length() &lt;= tamanho) {				resultado.add(pal);			}		}		return resultado;	}		public static void main(String[] args) {		List linguagens = new ArrayList();		linguagens.add(&quot;Java&quot;);		linguagens.add(&quot;Scala&quot;);		linguagens.add(&quot;Groovy&quot;);		linguagens.add(&quot;Ruby&quot;);				Seletor seletor = new Seletor();		List selecionadas = seletor.selecionaMenoresQue(linguagens, 5);		System.out.println(&quot;Total &quot;+selecionadas.size())				for (int i = 0; i &lt; selecionadas.size(); i++) {			String sel = (String) selecionadas.get(i);			System.out.println(sel);		}	}} Seletor.java @lucastex import java.util.List;import java.util.ArrayList;class Seletor {	private List selecionaMenoresQue(List palavras, int tamanho) {		List resultado = new ArrayList();		for (int i = 0; i &lt; palavras.size(); i++) {			String pal = (String) palavras.get(i);			if (pal.length() &lt;= tamanho) {				resultado.add(pal);			}		}		return resultado;	}		public static void main(String[] args) {		List linguagens = new ArrayList();		linguagens.add(&quot;Java&quot;);		linguagens.add(&quot;Scala&quot;);		linguagens.add(&quot;Groovy&quot;);		linguagens.add(&quot;Ruby&quot;);				Seletor seletor = new Seletor();		List selecionadas = seletor.selecionaMenoresQue(linguagens, 5);		System.out.println(&quot;Total &quot;+selecionadas.size())				for (int i = 0; i &lt; selecionadas.size(); i++) {			String sel = (String) selecionadas.get(i);			System.out.println(sel);		}	}} Seletor.groovy @lucastex Groovy é melhor que Java! @lucastex import java.util.List;import java.util.ArrayList;class Seletor {	private List selecionaMenoresQue(List palavras, int tamanho) {		List resultado = new ArrayList();		for (int i = 0; i &lt; palavras.size(); i++) {			String pal = (String) palavras.get(i);			if (pal.length() &lt;= tamanho) {				resultado.add(pal);			}		}		return resultado;	}		public static void main(String[] args) {		List linguagens = new ArrayList();		linguagens.add(&quot;Java&quot;);		linguagens.add(&quot;Scala&quot;);		linguagens.add(&quot;Groovy&quot;);		linguagens.add(&quot;Ruby&quot;);				Seletor seletor = new Seletor();		List selecionadas = seletor.selecionaMenoresQue(linguagens, 5);		System.out.println(&quot;Total &quot;+selecionadas.size())				for (int i = 0; i &lt; selecionadas.size(); i++) {			String sel = (String) selecionadas.get(i);			System.out.println(sel);		}	}} Seletor.java @lucastex def linguagens = [&quot;Java&quot;,&quot;Scala&quot;,&quot;Groovy&quot;,&quot;Ruby&quot;]def selecionadas = linguagens.findAll { it.size() &lt;= 5 }println &quot;Total ${selecionadas.size()}&quot;selecionadas.each { sel -&gt;	println sel} Seletor.groovy @lucastex “When you program in groovy, in many ways you're writing a special kind of java”(Dierk König) @lucastex Grails @lucastex cenário comum @lucastex Spring @lucastex Spring Hibernate @lucastex Spring Hibernate JSF @lucastex Spring Hibernate JSF DWR @lucastex Spring Hibernate JSF DWR Velocity @lucastex Spring Hibernate JSF DWR Velocity Tuckey @lucastex @lucastex Region 1 Que você é incompetente Que você é mentiroso Que colocar todos os frameworks juntos toma tempo e pode gerar problemas @lucastex Desenvolvimento rápido Full stack Fácil bootstrap Convenções - CoC Scaffolding Plugins @lucastex Desenvolvimento rápido Full stack Fácil bootstrap Convenções - CoC Scaffolding Plugins @lucastex mapeamento or - gorm log url rewrites view e decoration controladores controle transacional configuração por ambiente Full Stack @lucastex Mapeamento OR - gorm @lucastex Mapeamento OR - gorm Pessoa.findAllByNomeLikeAndIdadeGreaterThan(“%lucas%”, 25) @lucastex Mapeamento OR - gorm Pessoa.findAllByNomeLikeAndIdadeGreaterThan(“%lucas%”, 25)  Pessoa.get(1234) @lucastex Mapeamento OR - gorm Pessoa.findAllByNomeLikeAndIdadeGreaterThan(“%lucas%”, 25)  Pessoa.get(1234)  Date dateCreated Date lastUpdated @lucastex Mapeamento OR - gorm Pessoa.findAllByNomeLikeAndIdadeGreaterThan(“%lucas%”, 25)  Pessoa.get(1234)  Date dateCreated Date lastUpdated  Pessoa.findXXX(xxx, [max:10, offset:10, sort: “nome”, order: “asc”, cache: true])  @lucastex Mapeamento OR - gorm Pessoa.findAllByNomeLikeAndIdadeGreaterThan(“%lucas%”, 25)  Pessoa.get(1234)  Date dateCreated Date lastUpdated  Pessoa.findXXX(xxx, [max:10, offset:10, sort: “nome”, order: “asc”, cache: true])   Pessoa.findAll(“from Pessoa p where p.idade = 25”) @lucastex Mapeamento OR - gorm Pessoa.findAllByNomeLikeAndIdadeGreaterThan(“%lucas%”, 25)  Pessoa.get(1234)  Date dateCreated Date lastUpdated  Pessoa.findXXX(xxx, [max:10, offset:10, sort: “nome”, order: “asc”, cache: true])   Pessoa.findAll(“from Pessoa p where p.idade = 25”)  def onLoad() { ... } def beforeInsert() { ... } def beforeUpdate() { ... } def beforeDelete() { ... } @lucastex Desenvolvimento rápido Full stack Fácil bootstrap Convenções - CoC Scaffolding Plugins @lucastex Fácil bootstrap grails create-app umesp grails run-app @lucastex @lucastex banco de dados gerenciamento de dependências mapeamento de urls controladores dominios (tabelas) bundles de internacionalização servicos reutilizáveis taglibs classes utilitarias jars de bibliotecas scripts de automatização outros fontes dependentes testes pasta de arquivos web           telas e páginas      @lucastex Desenvolvimento rápido Full stack Fácil bootstrap Convenções - CoC Scaffolding Plugins @lucastex CoC - Classes de domínio class Pessoa { String nome String telefone String email String cpf  static constraints = { nome(nullable:false) telefone(nullable:true, maxSize: 8) email(email:true) cpf(cpf:true) } } @lucastex class Pessoa { String nome String telefone String email String cpf  static constraints = { nome(nullable:false) telefone(nullable:true, maxSize: 8) email(email:true) cpf(cpf:true) }  static mapping = { table ‘TBL_PESS’ nome column:‘STR_NM’ telefone column: ‘STR_TLFN’ email column: ‘STR_ML’ CPF column: ‘STR_CPF’ } } CoC - Classes de domínio @lucastex CoC - Controllers class PessoaController {  def criar = {  def pessoa = new Pessoa(params) pessoa.save() }  } @lucastex class PessoaController {  def criar = {  def pessoa = new Pessoa(params) pessoa.save() }  } http://localhost:8080/app/pessoa/criar  CoC - Controllers @lucastex class PessoaController {  def criar = {  def pessoa = new Pessoa(params) pessoa.save() }  } http://localhost:8080/app/pessoa/criar  grails-app/ views/ pessoa/ criar.gsp  CoC - Controllers @lucastex Desenvolvimento rápido Full stack Fácil bootstrap Convenções - CoC Scaffolding Plugins @lucastex Scaffolding Prototipação das Domain Classes Estático / Dinâmico (templates) Integridade relacional e dos tipos Validação @lucastex Scaffolding @lucastex Scaffolding @lucastex Scaffolding @lucastex Scaffolding estático grails generate-all Pessoa @lucastex grails generate-all Pessoa Scaffolding estático @lucastex class PessoaController {  def scaffold = true  } Scaffolding dinâmico @lucastex Validação @lucastex Desenvolvimento rápido Full stack Fácil bootstrap Convenções - CoC Scaffolding Plugins @lucastex Plugins fácil extensão modularização de aplicações adição de métodos / comportamento gerenciamento automático @lucastex Plugins 500+ plugins atualmente segurança manipulação de imagens cms / blog  quartz (agendamento) ui lucene @lucastex Plugins mail gwt feed / rss geração de diagramas de classe gráficos jquery auditoria @lucastex Plugins performance  behaviourtaggablefeaturablerateableattachmentable commentable @lucastex segredo? @lucastex Rock solid foundations Spring  @lucastex Rock solid foundations Spring Hibernate  @lucastex Rock solid foundations Spring Hibernate Sitemesh  @lucastex Rock solid foundations Spring Hibernate Sitemesh Log4J  @lucastex Rock solid foundations Spring Hibernate Sitemesh Log4J Plugins  @lucastex Rock solid foundations Spring Hibernate Sitemesh Log4J Plugins JAVA / JVM   @lucastex Comunidade @lucastex Fontes de informação grails.org gr8forums.org (en) grailsbrasil.com (pt) springsource.com groovy.codehaus.org twitter (#groovy e #grails) Listas de e-mail groovy-user grails-user @lucastex GroovyMag.com @lucastex brasilitfree brasilit10 @lucastex Dúvidas? @lucastex Demo! @lucastex Grails Java produtivo e divertido Lucas Teixeira lucastex.com.br lucastex.com @lucastex"/>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//      <![CDATA[
+            var images = new Array (91);
+            images[0] = "Metodista-Grails_files/Metodista-Grails.001.png";
+            images[1] = "Metodista-Grails_files/Metodista-Grails.002.png";
+            images[2] = "Metodista-Grails_files/Metodista-Grails.003.png";
+            images[3] = "Metodista-Grails_files/Metodista-Grails.004.png";
+            images[4] = "Metodista-Grails_files/Metodista-Grails.005.png";
+            images[5] = "Metodista-Grails_files/Metodista-Grails.006.png";
+            images[6] = "Metodista-Grails_files/Metodista-Grails.007.png";
+            images[7] = "Metodista-Grails_files/Metodista-Grails.008.png";
+            images[8] = "Metodista-Grails_files/Metodista-Grails.009.png";
+            images[9] = "Metodista-Grails_files/Metodista-Grails.010.png";
+            images[10] = "Metodista-Grails_files/Metodista-Grails.011.png";
+            images[11] = "Metodista-Grails_files/Metodista-Grails.012.png";
+            images[12] = "Metodista-Grails_files/Metodista-Grails.013.png";
+            images[13] = "Metodista-Grails_files/Metodista-Grails.014.png";
+            images[14] = "Metodista-Grails_files/Metodista-Grails.015.png";
+            images[15] = "Metodista-Grails_files/Metodista-Grails.016.png";
+            images[16] = "Metodista-Grails_files/Metodista-Grails.017.png";
+            images[17] = "Metodista-Grails_files/Metodista-Grails.018.png";
+            images[18] = "Metodista-Grails_files/Metodista-Grails.019.png";
+            images[19] = "Metodista-Grails_files/Metodista-Grails.020.png";
+            images[20] = "Metodista-Grails_files/Metodista-Grails.021.png";
+            images[21] = "Metodista-Grails_files/Metodista-Grails.022.png";
+            images[22] = "Metodista-Grails_files/Metodista-Grails.023.png";
+            images[23] = "Metodista-Grails_files/Metodista-Grails.024.png";
+            images[24] = "Metodista-Grails_files/Metodista-Grails.025.png";
+            images[25] = "Metodista-Grails_files/Metodista-Grails.026.png";
+            images[26] = "Metodista-Grails_files/Metodista-Grails.027.png";
+            images[27] = "Metodista-Grails_files/Metodista-Grails.028.png";
+            images[28] = "Metodista-Grails_files/Metodista-Grails.029.png";
+            images[29] = "Metodista-Grails_files/Metodista-Grails.030.png";
+            images[30] = "Metodista-Grails_files/Metodista-Grails.031.png";
+            images[31] = "Metodista-Grails_files/Metodista-Grails.032.png";
+            images[32] = "Metodista-Grails_files/Metodista-Grails.033.png";
+            images[33] = "Metodista-Grails_files/Metodista-Grails.034.png";
+            images[34] = "Metodista-Grails_files/Metodista-Grails.035.png";
+            images[35] = "Metodista-Grails_files/Metodista-Grails.036.png";
+            images[36] = "Metodista-Grails_files/Metodista-Grails.037.png";
+            images[37] = "Metodista-Grails_files/Metodista-Grails.038.png";
+            images[38] = "Metodista-Grails_files/Metodista-Grails.039.png";
+            images[39] = "Metodista-Grails_files/Metodista-Grails.040.png";
+            images[40] = "Metodista-Grails_files/Metodista-Grails.041.png";
+            images[41] = "Metodista-Grails_files/Metodista-Grails.042.png";
+            images[42] = "Metodista-Grails_files/Metodista-Grails.043.png";
+            images[43] = "Metodista-Grails_files/Metodista-Grails.044.png";
+            images[44] = "Metodista-Grails_files/Metodista-Grails.045.png";
+            images[45] = "Metodista-Grails_files/Metodista-Grails.046.png";
+            images[46] = "Metodista-Grails_files/Metodista-Grails.047.png";
+            images[47] = "Metodista-Grails_files/Metodista-Grails.048.png";
+            images[48] = "Metodista-Grails_files/Metodista-Grails.049.png";
+            images[49] = "Metodista-Grails_files/Metodista-Grails.050.png";
+            images[50] = "Metodista-Grails_files/Metodista-Grails.051.png";
+            images[51] = "Metodista-Grails_files/Metodista-Grails.052.png";
+            images[52] = "Metodista-Grails_files/Metodista-Grails.053.png";
+            images[53] = "Metodista-Grails_files/Metodista-Grails.054.png";
+            images[54] = "Metodista-Grails_files/Metodista-Grails.055.png";
+            images[55] = "Metodista-Grails_files/Metodista-Grails.056.png";
+            images[56] = "Metodista-Grails_files/Metodista-Grails.057.png";
+            images[57] = "Metodista-Grails_files/Metodista-Grails.058.png";
+            images[58] = "Metodista-Grails_files/Metodista-Grails.059.png";
+            images[59] = "Metodista-Grails_files/Metodista-Grails.060.png";
+            images[60] = "Metodista-Grails_files/Metodista-Grails.061.png";
+            images[61] = "Metodista-Grails_files/Metodista-Grails.062.png";
+            images[62] = "Metodista-Grails_files/Metodista-Grails.063.png";
+            images[63] = "Metodista-Grails_files/Metodista-Grails.064.png";
+            images[64] = "Metodista-Grails_files/Metodista-Grails.065.png";
+            images[65] = "Metodista-Grails_files/Metodista-Grails.066.png";
+            images[66] = "Metodista-Grails_files/Metodista-Grails.067.png";
+            images[67] = "Metodista-Grails_files/Metodista-Grails.068.png";
+            images[68] = "Metodista-Grails_files/Metodista-Grails.069.png";
+            images[69] = "Metodista-Grails_files/Metodista-Grails.070.png";
+            images[70] = "Metodista-Grails_files/Metodista-Grails.071.png";
+            images[71] = "Metodista-Grails_files/Metodista-Grails.072.png";
+            images[72] = "Metodista-Grails_files/Metodista-Grails.073.png";
+            images[73] = "Metodista-Grails_files/Metodista-Grails.074.png";
+            images[74] = "Metodista-Grails_files/Metodista-Grails.075.png";
+            images[75] = "Metodista-Grails_files/Metodista-Grails.076.png";
+            images[76] = "Metodista-Grails_files/Metodista-Grails.077.png";
+            images[77] = "Metodista-Grails_files/Metodista-Grails.078.png";
+            images[78] = "Metodista-Grails_files/Metodista-Grails.079.png";
+            images[79] = "Metodista-Grails_files/Metodista-Grails.080.png";
+            images[80] = "Metodista-Grails_files/Metodista-Grails.081.png";
+            images[81] = "Metodista-Grails_files/Metodista-Grails.082.png";
+            images[82] = "Metodista-Grails_files/Metodista-Grails.083.png";
+            images[83] = "Metodista-Grails_files/Metodista-Grails.084.png";
+            images[84] = "Metodista-Grails_files/Metodista-Grails.085.png";
+            images[85] = "Metodista-Grails_files/Metodista-Grails.086.png";
+            images[86] = "Metodista-Grails_files/Metodista-Grails.087.png";
+            images[87] = "Metodista-Grails_files/Metodista-Grails.088.png";
+            images[88] = "Metodista-Grails_files/Metodista-Grails.089.png";
+            images[89] = "Metodista-Grails_files/Metodista-Grails.090.png";
+            images[90] = "Metodista-Grails_files/Metodista-Grails.091.png";
+            var index = 0;
+            function WindowLoaded(evt)
+            {
+                document.body.onselectstart = function () { return false; };
+            }
+            function Step(i)
+            {
+                GoTo(index + i)
+            }
+            function GoTo(newIndex)
+            {
+                if(newIndex >= 0 && newIndex < images.length)
+                {
+                    index = newIndex;
+                    document.Slideshow.src = images[index];
+                }
+            }
+//      ]]>
+    </script>
+</head>
+<body bgcolor="black" onload='WindowLoaded(event);'>
+    <p align="center">
+        <br/>
+        <br/>
+        <img name="Slideshow" alt="" src="Metodista-Grails_files/Metodista-Grails.001.png" onclick="Step(1)"/>
+        <br/>
+        <br/>
+        <input type="image" src="Metodista-Grails_files/home.png" onclick="GoTo(0)"/>
+        &nbsp;&nbsp;&nbsp;
+        <input type="image" src="Metodista-Grails_files/prev.png" onclick="Step(-1)"/>
+        <input type="image" src="Metodista-Grails_files/next.png" onclick="Step(1)"/>
+    </p>
+</body>
+</html>
